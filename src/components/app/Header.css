@@ -1,0 +1,20 @@
+header {
+    background-color: #e2b091;
+    color: #472426;
+    font-size: 2rem;
+}
+
+#logo-container, h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#logo-container {
+    width: 10%;
+}
+
+#logo {
+    width: 100%;
+    background: white;
+    border-radius: 50%;
+}

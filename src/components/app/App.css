@@ -1,0 +1,52 @@
+.organize {
+    background-color: #472426;
+    color: #e2b091
+}
+
+input {
+    font-size: .8rem;
+}
+
+input:not(#name) {
+    width: 5%;
+}
+
+form {
+    padding: 1.5%;
+}
+
+#field {
+    font-size: .8rem;
+    padding: 1.5%;
+}
+
+select {
+    color: #e2b091;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.sort {
+    padding: 1.5%;
+}
+
+.display {
+    background-color: #F7DFD4;
+    width: 100%;
+}
+
+ul {
+    background-color: #eabcac;
+    width: 80%;
+}
+
+li {
+    width: 40%;
+}
+
+.poke-container {
+    width: 100%;
+}
+
+.poke-image {
+    width: 100%;
+}
