@@ -1,3 +1,32 @@
+@media screen and (min-width:320px) and (max-width:500) {
+    li {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 720px) {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 300px;
+    }
+
+    li {
+        width: 41%;
+    }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1440px) {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li {
+        width: 19%;
+    }
+}
+
 .organize {
     background-color: #472426;
     color: #e2b091
@@ -15,9 +44,17 @@ form {
     padding: 1.5%;
 }
 
+fieldset div {
+    padding: 1%;
+}
+
 #field {
     font-size: .8rem;
     padding: 1.5%;
+}
+
+input {
+    font-family: 'Press Start 2P', cursive;
 }
 
 select {
@@ -31,20 +68,32 @@ select {
 
 .display {
     background-color: #F7DFD4;
-    width: 100%;
+    padding: 2%;
 }
 
 ul {
     background-color: #eabcac;
-    width: 80%;
+    margin: 0 auto;
+    width: 85%;
+    border-radius: 5px;
+    padding: 1.5%;
+    justify-content: space-around;
 }
 
 li {
-    width: 40%;
+    margin: 2% auto;
+    padding: 2%;
+    text-align: center;
+    background: red;
 }
 
 .poke-container {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+p {
+    font-size: .75rem;
 }
 
 .poke-image {

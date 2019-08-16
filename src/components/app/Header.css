@@ -1,3 +1,15 @@
+@media screen and (min-width: 721px) and (max-width: 1440px) {
+    header {
+        display: flex;
+        max-height: 90px;
+        justify-content: left;
+    }
+    
+    #logo-container {
+        max-width: 65px;
+    }
+}
+
 header {
     background-color: #e2b091;
     color: #472426;
@@ -5,7 +17,7 @@ header {
 }
 
 #logo-container, h1 {
-    margin: 0 auto;
+    margin: 1.2% auto;
     text-align: center;
 }
 
