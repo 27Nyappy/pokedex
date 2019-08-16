@@ -13,9 +13,10 @@ body {
 
 @media screen and (min-width:320px) and (max-width:500) {
     body {
-        grid-template-rows: 1fr 1fr 4fr auto;
+        grid-template-rows: 1fr 1fr 1fr 2fr auto;
         grid-template-areas: 'header'
                              'organize'
+                             'display'
                              'display'
                              'footer'
     }
@@ -23,9 +24,10 @@ body {
 
 @media screen and (min-width: 500px) and (max-width: 720px) {
     body {
-        grid-template-rows: 1fr 1fr 3fr auto;
+        grid-template-rows: .5fr 1fr 1fr 1fr auto;
         grid-template-areas: 'header'
                              'organize'
+                             'display'
                              'display'
                              'footer'
     }
@@ -34,7 +36,7 @@ body {
 @media screen and (min-width: 721px) and (max-width: 1440px) {
     body {
         grid-template-columns: 1fr 1fr 2fr;
-        grid-template-rows: 90px 1fr 3fr 2fr 50px;
+        grid-template-rows: 90px 1fr 1fr 3fr .3fr;
         grid-template-areas: 'header header header'
                              'organize display display'
                              'organize display display'
