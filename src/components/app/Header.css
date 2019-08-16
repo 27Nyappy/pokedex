@@ -14,19 +14,15 @@ header {
     background-color: #e2b091;
     color: #472426;
     font-size: 2rem;
-}
-
-#logo-container, h1 {
-    margin: 1.2% auto;
     text-align: center;
 }
 
-#logo-container {
-    width: 10%;
+#logo, h1 {
+    margin: 1.2% auto;
 }
 
 #logo {
-    width: 100%;
+    width: 10%;
     background: white;
     border-radius: 50%;
 }
