@@ -8,11 +8,10 @@
     ul {
         display: flex;
         flex-wrap: wrap;
-        max-height: 300px;
     }
 
     li {
-        width: 41%;
+        width: 15%;
     }
 }
 
@@ -22,9 +21,7 @@
         flex-wrap: wrap;
     }
 
-    li {
-        width: 19%;
-    }
+    
 }
 
 .organize {
@@ -74,7 +71,7 @@ select {
 ul {
     background-color: #eabcac;
     margin: 0 auto;
-    width: 85%;
+    width: 80%;
     border-radius: 5px;
     padding: 1.5%;
     justify-content: space-around;
