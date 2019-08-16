@@ -1,0 +1,30 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "qunit test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/27Nyappy/pokedex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/27Nyappy/pokedex/issues"
+  },
+  "homepage": "https://github.com/27Nyappy/pokedex#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "esm": "^3.2.25",
+    "jsdom": "^15.1.1",
+    "quint": "^1.2.0"
+  }
+}
