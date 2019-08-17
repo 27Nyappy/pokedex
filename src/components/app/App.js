@@ -1,10 +1,9 @@
 import Component from '../Components.js';
 import Header from './Header.js';
 import PokeList from '../pokemon/PokeList.js';
-import FilterPokeType from '../options/FilterPokemonType.js';
 import Search from '../options/Search.js';
 import Paging from '../options/Paging.js';
-import { getPokemon } from '../../services/pokemon-api.js';
+import { pokemon } from '../../services/pokemon-api.js';
 import hashStorage from '../../services/hash-storage.js';
 
 class App extends Component {
@@ -18,7 +17,7 @@ class App extends Component {
         options.appendChild(search.renderDOM());
 
         const pokeDispList = dom.querySelector('.poke-disp-list');
-
+        
         const paging = new Paging();
         pokeDispList.appendChild(paging.renderDOM());
 
@@ -27,7 +26,7 @@ class App extends Component {
 
         function loadPokeList() {
             const options = hashStorage.get();
-            getPokemon(options)
+            pokemon(options)
                 .then(data => {
                     const pokemon = data.results;
                     const totalCount = data.count;
@@ -44,26 +43,7 @@ class App extends Component {
 
         window.addEventListener('hashchange', () => {
             loadPokeList();
-        })
-
-        // const filterPokeTypeProps = {
-        //     pokemon: pokemon,
-        //     onFilter: (pokeType) => {
-        //         let filteredTypes;
-        //         if(pokeType === 'all') {
-        //             filteredTypes = pokemon;
-        //         }
-        //         else {
-        //             filteredTypes = pokemon.filtered(poke => {
-        //                 return poke.type === pokeType;
-        //             });
-        //         }
-        //         const updateProps = { pokemon: filteredTypes };
-        //         pokeList.update(updateProps);
-        //     } 
-        // };
-        // const filterPokeType = new FilterPokeType(filterPokeTypeProps);
-        // const filterPokeTypeDOM = filterPokeType.renderDOM();
+        });     
 
     }
     renderHTML() {
