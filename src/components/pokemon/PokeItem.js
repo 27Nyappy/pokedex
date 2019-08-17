@@ -2,16 +2,16 @@ import Component from '../Components.js';
 
 class PokeItem extends Component {
     renderHTML() {
-        const pokemon = this.props.pokemon;
+        const poke = this.props.poke;
 
         return /*html*/`
             <li>
                 <div class="poke-info">
-                    <span class="poke-name">${pokemon.pokemon}</span>
-                    <p>Type <span class="type-span">${pokemon.type_1} ${pokemon.type_2}</span> Attack <span class="attack-span">${pokemon.attack}</span> Defense <span class="defense-span">${pokemon.defense}</span></p>
+                    <span class="poke-name">${poke.pokemon}</span>
+                    <p>Type <span class="type-span">${poke.type_1} ${poke.type_2}</span> Attack <span class="attack-span">${poke.attack}</span> Defense <span class="defense-span">${poke.defense}</span></p>
                 </div>
                 <div class="poke-container">
-                    <img class="poke-image" src="${pokemon.url}" alt="${pokemon.pokemon} image">
+                    <img class="poke-image" src="${poke.url}" alt="${poke.pokemon} image">
                 </div>
             </li>
         `;

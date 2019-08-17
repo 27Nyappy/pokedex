@@ -1,25 +1,3 @@
-@media screen and (min-width: 500px) and (max-width: 720px) {
-    header {
-        max-height: 110px;
-    }
-
-    #logo-container {
-        max-width: 45px;
-    }
-}
-
-@media screen and (min-width: 721px) and (max-width: 1440px) {
-    header {
-        display: flex;
-        max-height: 90px;
-        justify-content: left;
-    }
-    
-    #logo-container {
-        max-width: 65px;
-    }
-}
-
 header {
     background-color: #e2b091;
     color: #472426;
