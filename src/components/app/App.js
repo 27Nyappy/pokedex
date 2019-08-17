@@ -5,6 +5,7 @@ import FilterPokeType from '../options/FilterPokemonType.js';
 import Search from '../options/Search.js';
 import Paging from '../options/Paging.js';
 import { getPokemon } from '../../services/pokemon-api.js';
+import hashStorage from '../../services/hash-storage.js';
 
 class App extends Component {
 
@@ -14,26 +15,55 @@ class App extends Component {
 
         const options = dom.querySelector('.options');
         const search = new Search();
-        options.appendChild(Paging.renderDOM());
+        options.appendChild(search.renderDOM());
 
-        const filterPokeTypeProps = {
-            pokemon: pokemon,
-            onFilter: (pokeType) => {
-                let filteredTypes;
-                if(pokeType === 'all') {
-                    filteredTypes = pokemon;
-                }
-                else {
-                    filteredTypes = pokemon.filtered(poke => {
-                        return poke.type === pokeType;
+        const pokeDispList = dom.querySelector('.poke-disp-list');
+
+        const paging = new Paging();
+        pokeDispList.appendChild(paging.renderDOM());
+
+        const pokeList = new PokeList({ pokemon: [] });
+        pokeDispList.appendChild(pokeList.renderDOM());
+
+        function loadPokeList() {
+            const options = hashStorage.get();
+            getPokemon(options)
+                .then(data => {
+                    const pokemon = data.results;
+                    const totalCount = data.count;
+
+                    pokeList.update({ pokemon: pokemon });
+                    paging.update({
+                        totalCount: totalCount,
+                        currentPage: +options.page
                     });
-                }
-                const updateProps = { pokemon: filteredTypes };
-                pokeList.update(updateProps);
-            } 
-        };
-        const filterPokeType = new FilterPokeType(filterPokeTypeProps);
-        const filterPokeTypeDOM = filterPokeType.renderDOM();
+                });
+        }
+
+        loadPokeList();
+
+        window.addEventListener('hashchange', () => {
+            loadPokeList();
+        })
+
+        // const filterPokeTypeProps = {
+        //     pokemon: pokemon,
+        //     onFilter: (pokeType) => {
+        //         let filteredTypes;
+        //         if(pokeType === 'all') {
+        //             filteredTypes = pokemon;
+        //         }
+        //         else {
+        //             filteredTypes = pokemon.filtered(poke => {
+        //                 return poke.type === pokeType;
+        //             });
+        //         }
+        //         const updateProps = { pokemon: filteredTypes };
+        //         pokeList.update(updateProps);
+        //     } 
+        // };
+        // const filterPokeType = new FilterPokeType(filterPokeTypeProps);
+        // const filterPokeTypeDOM = filterPokeType.renderDOM();
 
     }
     renderHTML() {
@@ -49,6 +79,6 @@ class App extends Component {
             </div>
         `;
     }
-}
+} 
 
 export default App;

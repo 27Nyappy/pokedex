@@ -52,4 +52,4 @@ test('removes key from storage', assert => {
     const result = window.location.hash.slice(1);
 
     assert.equal(result, expected);
-})
+});
