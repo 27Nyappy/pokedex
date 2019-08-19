@@ -11,7 +11,7 @@ class PokeItem extends Component {
                     <p>Type <span class="type-span">${poke.type_1} ${poke.type_2}</span> Attack <span class="attack-span">${poke.attack}</span> Defense <span class="defense-span">${poke.defense}</span></p>
                 </div>
                 <div class="poke-container">
-                    <img class="poke-image" src="${poke.url}" alt="${poke.pokemon} image">
+                    <img class="poke-image" src="${poke.url_image}" alt="${poke.pokemon} image">
                 </div>
             </li>
         `;

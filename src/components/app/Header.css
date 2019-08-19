@@ -1,12 +1,11 @@
 header {
     background-color: #e2b091;
     color: #472426;
-    font-size: 2rem;
     text-align: center;
 }
 
 #logo, h1 {
-    margin: 1.2% auto;
+    margin: 0 auto;
 }
 
 #logo {
