@@ -24,6 +24,8 @@ class App extends Component {
         const pokeList = new PokeList({ pokemon: [] });
         pokeDispList.appendChild(pokeList.renderDOM());
 
+
+
         function loadPokeList() {
             const options = hashStorage.get();
             pokemon(options)
