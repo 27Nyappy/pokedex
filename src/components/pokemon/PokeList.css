@@ -9,5 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     width: 80%;
-    background-color: green;
+    background-color: #874e4c;
+    border: 1px dashed #472426;
+    border-radius: 2px;
 }

@@ -5,10 +5,11 @@
 }
 
 li {
-    margin: 1% auto;
+    margin: 2% auto;
     background: red;
     max-height: 180px;
-    border: 1px solid black;
+    border: 1px solid white;
+    border-radius: 2px;
 }
 
 .poke-info {

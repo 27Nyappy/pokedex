@@ -19,8 +19,20 @@
         margin: 0 auto;
     }
 
+    legend {
+        padding: 1%;
+    }
+
     fieldset div {
         height: 20%;
+        padding: 1% 0;
+    }
+
+    .paging {
+        height: 2%;
+        font-size: 2%;
+        text-align: right;
+        padding-right: 3%;
     }
 
     footer {
@@ -30,8 +42,5 @@
 
 legend, fieldset {
     border: 1px solid #e2b091;
-}
-
-legend {
-    padding: 1%;
+    border-radius: 2px;
 }
