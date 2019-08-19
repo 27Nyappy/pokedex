@@ -1,7 +1,13 @@
+@media screen and (min-width: 320px) and (max-width: 650px) {
+    .multi-poke {
+        flex-direction: column;
+        margin: 2% auto;
+    }
+}
+
 .multi-poke {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
     width: 80%;
     background-color: green;
 }

@@ -4,6 +4,7 @@ import PokeList from '../pokemon/PokeList.js';
 import Search from '../options/Search.js';
 import Paging from '../options/Paging.js';
 import { pokemon } from '../../services/pokemon-api.js';
+import Footer from '../app/Footer.js';
 import hashStorage from '../../services/hash-storage.js';
 
 class App extends Component {
@@ -24,7 +25,8 @@ class App extends Component {
         const pokeList = new PokeList({ pokemon: [] });
         pokeDispList.appendChild(pokeList.renderDOM());
 
-
+        const footer = new Footer();
+        dom.append(footer.renderDOM());
 
         function loadPokeList() {
             const options = hashStorage.get();

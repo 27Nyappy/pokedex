@@ -1,15 +1,3 @@
-header {
-    background-color: #e2b091;
-    color: #472426;
-    text-align: center;
-    height: 10%;
-    max-height: 100px;
-}
-
-#logo, h1 {
-    margin: 0 auto;
-}
-
 #logo {
     width: 10%;
     background: white;

@@ -1,3 +1,36 @@
 body {
     font-family: 'Press Start 2P', cursive;
+    background-color: #EABCAC;
+}
+
+header {
+    background-color: #e2b091;
+    color: #472426;
+}
+
+.paging {
+    background-color: #874E4C;
+    color: #F7DFD4;
+}
+
+form {
+    background-color: #472426;
+    color: #F7DFD4;
+}
+
+footer {
+    background-color: #874E4C;
+    color: #F7DFD4;
+}
+
+button {
+    background-color: #874E4C;
+    color: #F7DFD4;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+}
+
+button:hover {
+    box-shadow: .5px .5px 1.5px #e2b091;
+    transform: scale(1.05);
 }
