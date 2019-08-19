@@ -16,10 +16,10 @@ test('renders html from data', assert => {
         <li>
             <div class="poke-info">
                 <span class="poke-name">${poke.pokemon}</span>
-                <p>Type <span class="type-span">${poke.type_1} ${poke.type_2}</span> Attack <span class="attack-span">${poke.attack}</span> Defense <span class="defense-span">${poke.defense}</span></p>
+                <p class="poke-stuff">Type <span class="type-span">${poke.type_1} ${poke.type_2}</span> Attack <span class="attack-span">${poke.attack}</span> Defense <span class="defense-span">${poke.defense}</span></p>
             </div>
-            <div class="poke-container">
-                <img class="poke-image" src="${poke.url}" alt="${poke.pokemon} image">
+            <div class="poke-img-container">
+                <img class="poke-image" src="${poke.url_image}" alt="${poke.pokemon} image">
             </div>
         </li>
         `;
